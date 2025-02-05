@@ -15,8 +15,15 @@ header{
     display: flex;
     margin-top: 47px;
     margin-bottom: 134px;
-    img{
+    .logo{
         margin-right: 80px;
+    }
+    .logo-640{
+        display: none;
+    }
+    .menu-640{
+        cursor: pointer;
+        display: none;
     }
     ul{
         display: flex;
@@ -72,6 +79,13 @@ header{
         left: 144px;
         top: -235px;
     }
+    .bike-bg640{
+        display: none;
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+    }
 }
     .infos{
         margin-top: 364px;
@@ -82,10 +96,14 @@ header{
             font-size: 45px;
             line-height: 110%;
             color: #f1f1f1;
+            max-width: 860px;
         }
         &__box{
             display: flex;
             ul{
+                img{
+                    display: none;
+                }
                 li{
                    h3{
                         font-family: "Gilroy", sans-serif;
@@ -176,7 +194,7 @@ header{
             }
             &__bottom{
                 position: absolute;
-                z-index: 3;
+                z-index: -1;
                 right: -176px;
                 bottom: -120px;
             }
@@ -196,6 +214,11 @@ header{
             right: -176px;
             top: 0;
         }
+        &__top640{
+            display: none;
+            position: absolute;
+            z-index: -1;
+        }
         h2{
             font-family: "Gilroy", sans-serif;
             font-weight: 500;
@@ -203,6 +226,7 @@ header{
             line-height: 110%;
             color: #ff4c0d;
             margin-bottom: 70px;
+            max-width: 740px;
         }
         &__box{
             display: flex;
@@ -254,6 +278,11 @@ header{
             top: 130px;
             left: -178px;
         }
+        &__medium640{
+            position: absolute;
+            display: none;
+            z-index: -1;
+        }
         &__uzor{
             position: absolute;
             z-index: -1;
@@ -273,6 +302,7 @@ header{
                 line-height: 110%;
                 color: #ff4c0d;
                 margin-bottom: 30px;
+                max-width: 522px;
             }
             p{
                 font-family: "Gilroy", sans-serif;
@@ -282,6 +312,7 @@ header{
                 letter-spacing: -0.01em;
                 color: #f1f1f1;
                 margin-bottom: 61px;
+                max-width: 318px;
             }
             ul{
                 display: flex;
@@ -301,15 +332,23 @@ header{
                 left: -176px;
             }
         }
+        .phone640{
+            display: none;
+        }
     }
 }
 .review_quest{
     .reviews{
         position: relative;
-        img{
+        &__top{
             position: absolute;
             top: 0;
             right: -176px;
+            z-index: -1;
+        }
+        &__top640{
+            display: none;
+            position: absolute;
             z-index: -1;
         }
         h2{
@@ -360,7 +399,7 @@ header{
                         line-height: 150%;
                         letter-spacing: -0.01em;
                         color: #f1f1f1;
-                        max-width: 382px;
+                        max-width: 380px;
                         margin-bottom: 18px;
                     }
                     p:last-child{
@@ -423,6 +462,7 @@ header{
                     line-height: 110%;
                     color: #ff4c0d;
                     margin-bottom: 30px;
+                    max-width: 415px;
                 }
                 p{
                     font-family: "Gilroy", sans-serif;
@@ -432,8 +472,10 @@ header{
                     letter-spacing: -0.01em;
                     color: #f1f1f1;
                     margin-bottom: 18px;
+                    max-width: 304px;
                 }
                 p:last-child{
+                    margin-bottom: 0;
                 }
                 button{
                     margin-top: 60px;
@@ -489,7 +531,6 @@ header{
         margin-bottom: 120px;
     }
     .bike-card{
-        // margin-left: 140px;
         display: flex;
         justify-content: space-between;
         padding: 60px;
@@ -498,10 +539,14 @@ header{
         width: 1160px;
         height: 550px;
         box-sizing: border-box;
-        img{
+        .wh{
             position: absolute;
-            top: -75px;
-            right: 60px;
+            top: -102px;
+            right: -145px;
+        }
+        .wh-640{
+            position: absolute;
+            display: none;
         }
         .bike-price{
             display: flex;
@@ -535,15 +580,15 @@ header{
         .bike-info{
             display: flex;
             flex-direction: column;
+            .ul-title{
+                font-family: "Gilroy", sans-serif;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 120%;
+                color: #fff;
+                margin-bottom: 25px;
+            }
             ul{
-                .ul-title{
-                    font-family: "Gilroy", sans-serif;
-                    font-weight: 600;
-                    font-size: 20px;
-                    line-height: 120%;
-                    color: #fff;
-                    margin-bottom: 25px;
-                }
                 li{
                     font-family: "Gilroy", sans-serif;
                     font-weight: 400;
@@ -582,15 +627,16 @@ footer{
             }            
         }
         .time{
-            text-align: end;
-            a{
-                max-width: 280px;
-                font-family: "Gilroy", sans-serif;
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 150%;
-                letter-spacing: -0.01em;
-                color: #f1f1f1;
+            p{
+                a{
+                    max-width: 280px;
+                    font-family: "Gilroy", sans-serif;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 150%;
+                    letter-spacing: -0.01em;
+                    color: #f1f1f1;
+                }  
             }
             p{
                 max-width: 280px;
@@ -601,6 +647,304 @@ footer{
                 letter-spacing: -0.01em;
                 color: #f1f1f1;
             }
+        }
+    }      
+}
+        
+
+@media (max-width:960px){
+    .container{
+        padding: 0 40px;
+    }
+    .menu{
+        justify-content: space-between;
+        .logo,ul,button{
+            display: none !important;
+        }
+        .logo-640{
+            display: block !important;
+        }
+        .menu-640{
+            display: block !important;
+        }
+    }
+    .banner{
+        .bike-bg{
+            display: none;
+        }
+        .bike-bg640{
+            display: block !important;
+            left: -41px !important;
+            top: -239px !important;
+        }
+        h1{
+            font-size: 40px !important;
+            line-height: 120% !important;
+            color: #ff4c0d !important;
+            margin-bottom: 20px !important; 
+        }
+        p{
+            font-size: 20px !important;
+            color: #f1f1f1 !important;
+        }
+    }
+    .infos{
+        margin-top: 252px !important;
+        h2{
+            font-weight: 600 !important;
+            font-size: 30px !important;
+        }
+        &__box{
+            flex-wrap: wrap;
+            ul{
+                margin-top: 40px;
+                margin-right: 0 !important;
+                img{
+                    margin-top: 15px;
+                    display: block !important;
+                    border-radius: 15px;
+                }
+                li{
+                    h3,p{
+                        opacity: 1 !important;
+                        max-width: 540px !important;
+                    }
+                    h3{
+                        color: #ff4c0d !important;
+                    }
+                    p{
+                        line-height: 160% !important;
+                    }
+                    p::after{
+                        background: #ff4c0d !important;
+                        opacity: 1 !important;
+                        width: 150px !important;
+                    }
+                }
+            }
+            ul:last-child{
+                margin-bottom: 80px;
+            }
+        }
+        .svg-bg{
+            &__top{
+                position: absolute;
+                z-index: -2;
+                left: -431px !important;
+                top: -440px;
+            }
+            &__medium{
+                position: absolute;
+                z-index: -1;
+                right: -42px !important;
+                bottom: 135px;
+            }
+            &__bottom{
+                position: absolute;
+                right: -40px !important;
+                bottom: 0 !important;
+            }
+
+        }
+        .images{
+            display: none !important;
+        }
+    }
+    .design{
+        padding-top: 80px !important;
+        h2{
+            font-weight: 600 !important;
+            font-size: 30px !important;
+            color: #f1f1f1 !important;
+        }
+        &__uzor{
+            display: none !important;
+        }
+        &__top{
+            display: none !important;
+        }
+        &__top640{
+            display: block !important;
+            z-index: 1 !important;
+            top: 0;
+            right: -40px;
+        }
+        &__medium{
+            display: none !important;
+        }
+        &__medium640{
+            display: block !important;
+            bottom: -300px;
+            left: -40px;
+        }
+        &__box{
+            flex-wrap: wrap;
+            .mini-banner{
+                margin-right: 0 !important;
+                margin-bottom: 20px;
+                .banner-text{
+                    h3{
+                        top:388px !important;
+                    }
+                    p{
+                        line-height: 160% !important;
+                        top:432px !important;
+                    }
+                }
+            }
+            .mini-banner:last-child{
+                margin-bottom: 149px;
+            }
+        }
+    }
+    .apps{
+        &__text{
+            margin-right: 0 !important;
+            h2{
+                font-weight: 600 !important;
+                font-size: 30px !important;
+                margin-bottom: 15px !important;
+                width: 304px !important;
+            }
+            p{
+                line-height: 160% !important;
+                margin-bottom: 59px !important;
+                max-width: 259px !important;
+            }
+            &__bottom{
+                display: none !important;
+            }
+        }
+        .phone{
+            display: none !important;
+        }
+        .phone640{
+            display: block !important;
+            margin-right: 30px;
+        }
+    }
+    .reviews{
+        h2{
+            padding-top: 80px !important;
+            font-weight: 600 !important;
+            font-size: 30px !important;
+            color: #f1f1f1 !important;
+        }
+        &__top{
+            display: none !important;
+        }
+        &__top640{
+            display: block !important;
+            top: 0;
+            right: -40px;
+        }
+        &__slider{
+            .review{
+                width: 415px !important;
+                height: 323px !important;
+                &__text{
+                    p{
+                        max-width: 372px !important;
+                        line-height: 160% !important;
+                        margin-bottom: 13px !important;
+                    }
+                    p:last-child{
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+        }
+        .buttons{
+            margin-bottom: 80px !important;
+            margin-top: 393px !important;
+            .arrows{
+                bottom: 0px !important;
+                left: 371px !important;
+            }
+        }
+    }
+    .quest{
+        margin-bottom: 80px !important;
+        &__text{
+            flex-direction: column;
+            .question-left{
+                h2{
+                    font-weight: 600 !important;
+                    font-size: 30px !important;
+                    margin-bottom: 15px !important;
+                    max-width: 404px !important;
+                }
+                p{
+                    max-width: 416px !important;
+                    line-height: 160%;
+                }
+                button{
+                    margin-top: 12px !important;
+                }
+            }
+            .question-right{
+                margin-top: 80px !important;
+                ul{
+                    margin-left: 0 !important;
+                }
+            }
+        }
+    }
+    .bike-card{
+        background-image: url('../image/svg/bg-wh-bike640.svg') !important;
+        background-repeat: no-repeat;
+        width: 560px !important;
+        height: 420px !important;
+        flex-direction: column;
+        padding: 40px !important;
+        .wh{
+            display: none !important;
+        }
+        .wh-640{
+            display: block !important;
+            top: -66px;
+            left: 175px;
+        }
+        .bike-info{
+            p{
+                font-weight: 700 !important;
+                font-size: 16px !important;
+                line-height: 150% !important;
+                color: #f1f1f1 !important;
+                margin-bottom: 0 !important;
+                margin-top: 10px !important;
+            }
+            ul{
+                display: none !important;
+            }
+        }
+        .bike-price{
+            h2{
+                font-weight: 600 !important;
+                font-size: 30px !important;
+            }
+            span{
+                font-size: 25px !important;
+                line-height: 105% !important;
+            }
+            button{
+                margin-top: 184px !important;
+            }
+        }
+    }
+    footer{
+        padding: 40px 0;
+    }
+    .footer{
+        flex-direction: column;
+        .xiaomi{
+            display: flex !important;
+            justify-content: center;
+        }
+        .time{
+            display: flex !important;
+            align-items: center !important;
+            flex-direction: column;
         }
     }
 }
