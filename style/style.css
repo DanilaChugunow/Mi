@@ -54,6 +54,10 @@ body {
   overflow-x: hidden;
 }
 
+.cont {
+  padding-left: 40px;
+}
+
 .container {
   max-width: 1160px;
   margin: 0 auto;
@@ -136,6 +140,11 @@ header .banner .bike-bg640 {
   left: 0;
   top: 0;
 }
+header .banner .bike-bg320 {
+  position: absolute;
+  z-index: -1;
+  display: none;
+}
 header .infos {
   margin-top: 364px;
   position: relative;
@@ -146,12 +155,14 @@ header .infos h2 {
   font-size: 45px;
   line-height: 110%;
   color: #f1f1f1;
-  max-width: 860px;
+  max-width: 870px;
+  margin-bottom: 60px;
 }
 header .infos__box {
   display: flex;
 }
 header .infos__box ul {
+  cursor: pointer;
   margin-right: 40px;
 }
 header .infos__box ul img {
@@ -217,16 +228,29 @@ header .infos .images {
 }
 header .infos .images img {
   border-radius: 15px;
+  width: 760px;
+  height: 400px;
 }
 header .infos .images .small {
   height: 300px;
   width: 360px;
+  order: 1;
 }
 header .infos .svg-bg__top {
   position: absolute;
   z-index: -1;
   left: -177px;
   top: -440px;
+}
+header .infos .svg-bg__top640 {
+  display: none;
+  position: absolute;
+  z-index: -1;
+}
+header .infos .svg-bg__top320 {
+  position: absolute;
+  z-index: -1;
+  display: none;
 }
 header .infos .svg-bg__medium {
   position: absolute;
@@ -257,6 +281,11 @@ header .infos .svg-bg__bottom {
   position: absolute;
   z-index: -1;
 }
+.info_app .design__top320 {
+  display: none;
+  position: absolute;
+  z-index: -1;
+}
 .info_app .design h2 {
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
@@ -275,12 +304,12 @@ header .infos .svg-bg__bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 560px;
-  height: 550px;
   box-sizing: border-box;
   position: relative;
 }
 .info_app .design__box .mini-banner img {
+  width: 560px;
+  height: 550px;
   border-radius: 15px;
 }
 .info_app .design__box .mini-banner .banner-text h3 {
@@ -304,6 +333,9 @@ header .infos .svg-bg__bottom {
   letter-spacing: -0.01em;
   color: #f1f1f1;
   max-width: 440px;
+}
+.info_app .design__box .mini-banner .banner-text320 {
+  display: none;
 }
 .info_app .design__box .mini-banner:last-child {
   margin-right: 0;
@@ -331,6 +363,11 @@ header .infos .svg-bg__bottom {
 .info_app .apps__text {
   position: relative;
   margin-right: 75px;
+}
+.info_app .apps__text__circle320 {
+  display: none;
+  position: absolute;
+  z-index: -1;
 }
 .info_app .apps__text h2 {
   font-family: "Gilroy", sans-serif;
@@ -371,6 +408,9 @@ header .infos .svg-bg__bottom {
 .info_app .apps .phone640 {
   display: none;
 }
+.info_app .apps .phone320 {
+  display: none;
+}
 
 .review_quest .reviews {
   position: relative;
@@ -409,7 +449,7 @@ header .infos .svg-bg__bottom {
 }
 .review_quest .reviews__slider .review__text {
   padding-left: 40px;
-  max-height: 294;
+  padding-right: 40px;
 }
 .review_quest .reviews__slider .review__text h3 {
   font-family: "Gilroy", sans-serif;
@@ -483,11 +523,16 @@ header .infos .svg-bg__bottom {
   position: relative;
   display: flex;
 }
-.review_quest .quest__text img {
+.review_quest .quest__text .quest-circle {
   position: absolute;
   z-index: -1;
   left: -177px;
   top: -300px;
+}
+.review_quest .quest__text .quest-circle640 {
+  position: absolute;
+  z-index: -1;
+  display: none;
 }
 .review_quest .quest__text .question-left {
   display: flex;
@@ -580,6 +625,14 @@ header .infos .svg-bg__bottom {
   position: absolute;
   display: none;
 }
+.review_quest .bike-card .wh-320 {
+  display: none;
+  position: absolute;
+}
+.review_quest .bike-card .wh_circle320 {
+  display: none;
+  position: absolute;
+}
 .review_quest .bike-card .bike-price {
   display: flex;
   flex-direction: column;
@@ -645,6 +698,10 @@ footer .footer {
   display: flex;
   justify-content: space-between;
 }
+footer .footer .xiaomi {
+  display: flex;
+  flex-direction: column;
+}
 footer .footer .xiaomi p {
   max-width: 146px;
   font-family: "Gilroy", sans-serif;
@@ -654,6 +711,13 @@ footer .footer .xiaomi p {
   letter-spacing: -0.01em;
   text-align: start;
   color: #f1f1f1;
+}
+footer .footer .time {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer .time p {
+  text-align: end;
 }
 footer .footer .time p a {
   max-width: 280px;
@@ -679,6 +743,8 @@ footer .footer .time p {
     padding: 0 40px;
   }
   .menu {
+    margin-top: 44px !important;
+    margin-bottom: 119px !important;
     justify-content: space-between;
   }
   .menu .logo, .menu ul, .menu button {
@@ -695,7 +761,7 @@ footer .footer .time p {
   }
   .banner .bike-bg640 {
     display: block !important;
-    left: -41px !important;
+    left: -40px !important;
     top: -239px !important;
   }
   .banner h1 {
@@ -711,15 +777,21 @@ footer .footer .time p {
   .infos {
     margin-top: 252px !important;
   }
-  .infos h2 {
+  .infos__title {
+    display: flex;
+    justify-content: center;
+  }
+  .infos__title h2 {
     font-weight: 600 !important;
     font-size: 30px !important;
+    margin-bottom: 40px !important;
   }
   .infos__box {
+    justify-content: center;
     flex-wrap: wrap;
   }
   .infos__box ul {
-    margin-top: 40px;
+    margin-bottom: 40px;
     margin-right: 0 !important;
   }
   .infos__box ul img {
@@ -743,24 +815,24 @@ footer .footer .time p {
     width: 150px !important;
   }
   .infos__box ul:last-child {
-    margin-bottom: 80px;
+    margin-bottom: 80px !important;
   }
   .infos .svg-bg__top {
-    position: absolute;
-    z-index: -2;
-    left: -431px !important;
-    top: -440px;
+    display: none !important;
+  }
+  .infos .svg-bg__top640 {
+    display: block !important;
+    top: -370px;
+    right: -40px;
   }
   .infos .svg-bg__medium {
     position: absolute;
     z-index: -1;
-    right: -42px !important;
+    right: -40px !important;
     bottom: 135px;
   }
   .infos .svg-bg__bottom {
-    position: absolute;
-    right: -40px !important;
-    bottom: 0 !important;
+    display: none !important;
   }
   .infos .images {
     display: none !important;
@@ -781,7 +853,7 @@ footer .footer .time p {
   }
   .design__top640 {
     display: block !important;
-    z-index: 1 !important;
+    z-index: -1 !important;
     top: 0;
     right: -40px;
   }
@@ -795,10 +867,14 @@ footer .footer .time p {
   }
   .design__box {
     flex-wrap: wrap;
+    justify-content: center !important;
   }
   .design__box .mini-banner {
     margin-right: 0 !important;
     margin-bottom: 20px;
+  }
+  .design__box .mini-banner .banner-text320 {
+    display: none;
   }
   .design__box .mini-banner .banner-text h3 {
     top: 388px !important;
@@ -809,6 +885,9 @@ footer .footer .time p {
   }
   .design__box .mini-banner:last-child {
     margin-bottom: 149px;
+  }
+  .apps {
+    justify-content: center !important;
   }
   .apps__text {
     margin-right: 0 !important;
@@ -832,7 +911,7 @@ footer .footer .time p {
   }
   .apps .phone640 {
     display: block !important;
-    margin-right: 30px;
+    margin-left: 45px;
   }
   .reviews h2 {
     padding-top: 80px !important;
@@ -846,11 +925,20 @@ footer .footer .time p {
   .reviews__top640 {
     display: block !important;
     top: 0;
-    right: -40px;
+    right: 0px;
+  }
+  .reviews__slider {
+    position: relative;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    flex-wrap: nowrap;
   }
   .reviews__slider .review {
+    min-width: 460px;
     width: 415px !important;
     height: 323px !important;
+    margin-right: 20px !important;
   }
   .reviews__slider .review__text p {
     max-width: 372px !important;
@@ -858,7 +946,7 @@ footer .footer .time p {
     margin-bottom: 13px !important;
   }
   .reviews__slider .review__text p:last-child {
-    margin-bottom: 40px;
+    margin-bottom: 40px !important;
   }
   .reviews .buttons {
     margin-bottom: 80px !important;
@@ -866,13 +954,21 @@ footer .footer .time p {
   }
   .reviews .buttons .arrows {
     bottom: 0px !important;
-    left: 371px !important;
+    left: 435px !important;
   }
   .quest {
     margin-bottom: 80px !important;
   }
   .quest__text {
     flex-direction: column;
+  }
+  .quest__text .quest-circle {
+    display: none !important;
+  }
+  .quest__text .quest-circle640 {
+    display: block !important;
+    right: -40px;
+    top: -140px;
   }
   .quest__text .question-left h2 {
     font-weight: 600 !important;
@@ -882,7 +978,7 @@ footer .footer .time p {
   }
   .quest__text .question-left p {
     max-width: 416px !important;
-    line-height: 160%;
+    line-height: 160% !important;
   }
   .quest__text .question-left button {
     margin-top: 12px !important;
@@ -893,8 +989,12 @@ footer .footer .time p {
   .quest__text .question-right ul {
     margin-left: 0 !important;
   }
+  .quest__text .question-right ul li h3::after {
+    width: 150px !important;
+  }
   .bike-card {
     background-image: url("../image/svg/bg-wh-bike640.svg") !important;
+    background-size: cover;
     background-repeat: no-repeat;
     width: 560px !important;
     height: 420px !important;
@@ -907,7 +1007,7 @@ footer .footer .time p {
   .bike-card .wh-640 {
     display: block !important;
     top: -66px;
-    left: 175px;
+    left: 136px;
   }
   .bike-card .bike-info p {
     font-weight: 700 !important;
@@ -936,14 +1036,280 @@ footer .footer .time p {
   }
   .footer {
     flex-direction: column;
+    align-items: center;
   }
   .footer .xiaomi {
     display: flex !important;
+    flex-direction: column;
     justify-content: center;
   }
   .footer .time {
-    display: flex !important;
     align-items: center !important;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 0 20px;
+  }
+  .menu {
+    margin-top: 22px !important;
+    margin-bottom: 0px !important;
+  }
+  .menu .logo-640 {
+    width: 49px;
+    height: 24.68px;
+  }
+  .menu .menu-640 img {
+    width: 45px;
+    height: 45px;
+  }
+  .banner h1 {
+    display: none;
+  }
+  .banner p {
+    display: none;
+  }
+  .banner .bike-bg640 {
+    display: none !important;
+  }
+  .banner .bike-bg320 {
+    display: block !important;
+    left: -20px;
+    top: -72px;
+  }
+  .infos {
+    margin-top: 397px !important;
+  }
+  .infos__title {
+    display: flex;
+    justify-content: center;
+  }
+  .infos__title h2 {
+    font-size: 25px !important;
+    line-height: 120% !important;
+    margin-bottom: 30px !important;
+  }
+  .infos__box ul {
+    margin-bottom: 40px !important;
+    margin-right: 0 !important;
+  }
+  .infos__box ul img {
+    margin-top: 15px;
+    display: block !important;
+    border-radius: 15px;
+    width: 280px !important;
+    height: 200px !important;
+  }
+  .infos__box ul li h3, .infos__box ul li p {
+    opacity: 1 !important;
+    max-width: 280px !important;
+  }
+  .infos__box ul li h3 {
+    font-size: 16px !important;
+    margin-bottom: 20px !important;
+  }
+  .infos__box ul li p {
+    font-size: 12px !important;
+    line-height: 170% !important;
+  }
+  .infos__box ul li p::after {
+    width: 100px !important;
+    top: -10px !important;
+  }
+  .infos__box ul:last-child {
+    margin-bottom: 53px !important;
+  }
+  .infos .svg-bg__top640 {
+    display: none !important;
+  }
+  .infos .svg-bg__medium {
+    display: none !important;
+  }
+  .infos .svg-bg__top320 {
+    display: block !important;
+    left: -20px;
+    top: -110px;
+  }
+  .design {
+    padding-top: 60px !important;
+  }
+  .design h2 {
+    font-size: 25px !important;
+    line-height: 120% !important;
+    max-width: 278px !important;
+    margin-bottom: 30px !important;
+  }
+  .design__top640 {
+    display: none !important;
+  }
+  .design__medium640 {
+    display: none !important;
+  }
+  .design__top320 {
+    display: block !important;
+    left: -20px;
+    top: 0;
+  }
+  .design__box .mini-banner {
+    margin-bottom: 20px;
+  }
+  .design__box .mini-banner img {
+    width: 280px !important;
+    height: 260px !important;
+  }
+  .design__box .mini-banner .banner-text {
+    display: none !important;
+  }
+  .design__box .mini-banner .banner-text320 {
+    display: block !important;
+  }
+  .design__box .mini-banner .banner-text320 h3 {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    color: #f1f1f1;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    max-width: 280px;
+  }
+  .design__box .mini-banner .banner-text320 p {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 170%;
+    letter-spacing: -0.01em;
+    color: #f1f1f1;
+    max-width: 280px;
+  }
+  .design__box .mini-banner:last-child {
+    margin-bottom: 20px;
+  }
+  .apps {
     flex-direction: column;
+  }
+  .apps__text__circle320 {
+    display: block !important;
+    left: -20px;
+    bottom: -470px;
+  }
+  .apps__text h2 {
+    font-size: 25px !important;
+    line-height: 120% !important;
+    max-width: 278px !important;
+  }
+  .apps__text p {
+    font-size: 12px !important;
+    line-height: 170% !important;
+    margin-bottom: 105px !important;
+    max-width: 278px !important;
+  }
+  .apps__text ul {
+    display: none !important;
+  }
+  .apps .phone640 {
+    display: none !important;
+  }
+  .apps .phone320 {
+    display: block !important;
+    margin-bottom: 60px;
+  }
+  .reviews {
+    display: none !important;
+  }
+  .quest {
+    margin-bottom: 60px !important;
+  }
+  .quest__text {
+    flex-direction: column;
+  }
+  .quest__text .quest-circle640 {
+    display: none !important;
+  }
+  .quest__text .question-left h2 {
+    font-size: 25px !important;
+    line-height: 120% !important;
+    margin-bottom: 15px !important;
+    max-width: 280px !important;
+  }
+  .quest__text .question-left p {
+    max-width: 280px !important;
+    line-height: 170% !important;
+    font-size: 12px !important;
+  }
+  .quest__text .question-left button {
+    padding: 15px 83.5px;
+    margin-top: 0 !important;
+    max-width: 280px !important;
+  }
+  .quest__text .question-right {
+    margin-top: 60px !important;
+  }
+  .quest__text .question-right ul {
+    margin-left: 0 !important;
+  }
+  .quest__text .question-right ul li h3 {
+    font-size: 16px !important;
+  }
+  .quest__text .question-right ul li p {
+    font-size: 12px !important;
+    line-height: 170% !important;
+  }
+  .bike-card {
+    background-image: url("../image/svg/bg-wh-bike320.svg") !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 280px !important;
+    height: 618px !important;
+    padding: 30px !important;
+  }
+  .bike-card .wh-640 {
+    display: none !important;
+  }
+  .bike-card .wh-320 {
+    display: block !important;
+    left: 0;
+    top: 220px;
+  }
+  .bike-card .wh_circle320 {
+    display: block !important;
+    z-index: -1;
+    bottom: 0;
+    left: -20px;
+  }
+  .bike-card .bike-info p {
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    color: #f1f1f1 !important;
+    margin-top: 0 !important;
+    text-align: center;
+  }
+  .bike-card .bike-info ul {
+    display: none !important;
+  }
+  .bike-card .bike-price h2 {
+    font-size: 25px !important;
+    line-height: 120% !important;
+  }
+  .bike-card .bike-price span {
+    font-size: 20px !important;
+    line-height: 110% !important;
+  }
+  .bike-card .bike-price button {
+    margin-top: 380px !important;
+    max-width: 220px !important;
+    padding: 15px 84px !important;
+    text-align: center;
+  }
+  footer {
+    padding: 30px 0;
+  }
+  .footer .xiaomi p {
+    font-size: 12px !important;
+    line-height: 170% !important;
+  }
+  .footer .time p {
+    font-size: 12px !important;
+    line-height: 170% !important;
   }
 }/*# sourceMappingURL=style.css.map */

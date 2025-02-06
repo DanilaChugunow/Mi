@@ -5,6 +5,9 @@ body{
     background: #222222;
     overflow-x: hidden;
 }
+.cont{
+    padding-left: 40px;
+}
 .container{
     max-width: 1160px;
     margin: 0 auto;
@@ -86,7 +89,12 @@ header{
         left: 0;
         top: 0;
     }
-}
+    .bike-bg320{
+        position: absolute;
+        z-index: -1;
+        display: none;
+    }
+    }
     .infos{
         margin-top: 364px;
         position: relative;
@@ -96,11 +104,13 @@ header{
             font-size: 45px;
             line-height: 110%;
             color: #f1f1f1;
-            max-width: 860px;
+            max-width: 870px; 
+            margin-bottom: 60px;
         }
         &__box{
             display: flex;
             ul{
+                cursor: pointer;
                 img{
                     display: none;
                 }
@@ -171,10 +181,13 @@ header{
             justify-content: space-between;
             img{
                 border-radius: 15px;
+                width: 760px;
+                height: 400px;
             }
             .small{
                 height: 300px;
                 width: 360px;
+                order: 1;
             }
             margin-bottom: 120px;
         }
@@ -185,6 +198,16 @@ header{
                 z-index: -1;
                 left: -177px;
                 top: -440px;
+            }
+            &__top640{
+                display: none;
+                position: absolute;
+                z-index: -1;
+            }
+            &__top320{
+                position: absolute;
+                z-index: -1;
+                display: none;
             }
             &__medium{
                 position: absolute;
@@ -219,6 +242,11 @@ header{
             position: absolute;
             z-index: -1;
         }
+        &__top320{
+            display: none;
+            position: absolute;
+            z-index: -1;
+        }
         h2{
             font-family: "Gilroy", sans-serif;
             font-weight: 500;
@@ -236,11 +264,11 @@ header{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                width: 560px;
-                height: 550px;
                 box-sizing: border-box;
                 position: relative;
                 img{
+                    width: 560px;
+                    height: 550px;
                     border-radius: 15px;
                 }
                 .banner-text{
@@ -266,6 +294,9 @@ header{
                         color: #f1f1f1;
                         max-width: 440px;
                     }                    
+                }
+                .banner-text320{
+                    display: none;
                 } 
             }
             .mini-banner:last-child{
@@ -295,6 +326,11 @@ header{
         &__text{
             position: relative;
             margin-right: 75px;
+            &__circle320{
+                display: none;
+                position: absolute;
+                z-index: -1;
+            }
             h2{
                 font-family: "Gilroy", sans-serif;
                 font-weight: 500;
@@ -335,6 +371,9 @@ header{
         .phone640{
             display: none;
         }
+        .phone320{
+            display: none;
+        }
     }
 }
 .review_quest{
@@ -372,7 +411,7 @@ header{
                 margin-right: 40px;
                 &__text{
                     padding-left: 40px;
-                    max-height: 294;
+                    padding-right: 40px;
                     h3{
                         font-family: "Gilroy", sans-serif;
                         font-weight: 600;
@@ -446,11 +485,16 @@ header{
         &__text{
             position: relative;
             display: flex;
-            img{
+            .quest-circle{
                 position: absolute;
                 z-index: -1;
                 left: -177px;
                 top: -300px;
+            }
+            .quest-circle640{
+                position: absolute;
+                z-index: -1;
+                display: none;
             }
             .question-left{
                 display: flex;
@@ -548,6 +592,14 @@ header{
             position: absolute;
             display: none;
         }
+        .wh-320{
+            display: none;
+            position: absolute;
+        }
+        .wh_circle320{
+            display: none;
+            position: absolute;
+        }
         .bike-price{
             display: flex;
             flex-direction: column;
@@ -615,6 +667,8 @@ footer{
         display: flex;
         justify-content: space-between;
         .xiaomi{
+            display: flex;
+            flex-direction: column;
             p{
                 max-width: 146px;
                 font-family: "Gilroy", sans-serif;
@@ -627,7 +681,10 @@ footer{
             }            
         }
         .time{
+            display: flex;
+            flex-direction: column;
             p{
+                text-align: end;
                 a{
                     max-width: 280px;
                     font-family: "Gilroy", sans-serif;
@@ -657,6 +714,8 @@ footer{
         padding: 0 40px;
     }
     .menu{
+        margin-top: 44px !important;
+        margin-bottom: 119px !important;
         justify-content: space-between;
         .logo,ul,button{
             display: none !important;
@@ -674,7 +733,7 @@ footer{
         }
         .bike-bg640{
             display: block !important;
-            left: -41px !important;
+            left: -40px !important;
             top: -239px !important;
         }
         h1{
@@ -690,14 +749,21 @@ footer{
     }
     .infos{
         margin-top: 252px !important;
-        h2{
-            font-weight: 600 !important;
-            font-size: 30px !important;
+        &__title{
+            display: flex;
+            justify-content: center;
+            h2{
+                font-weight: 600 !important;
+                font-size: 30px !important;
+                margin-bottom: 40px !important;
+        
+            }
         }
         &__box{
+            justify-content: center;
             flex-wrap: wrap;
             ul{
-                margin-top: 40px;
+                margin-bottom: 40px;
                 margin-right: 0 !important;
                 img{
                     margin-top: 15px;
@@ -723,26 +789,27 @@ footer{
                 }
             }
             ul:last-child{
-                margin-bottom: 80px;
+                margin-bottom: 80px !important;
             }
         }
         .svg-bg{
             &__top{
-                position: absolute;
-                z-index: -2;
-                left: -431px !important;
-                top: -440px;
+                display: none !important;
+            }
+            &__top640{
+                display: block !important;
+                top: -370px;
+                right: -40px;
             }
             &__medium{
                 position: absolute;
                 z-index: -1;
-                right: -42px !important;
+                right: -40px !important;
                 bottom: 135px;
+
             }
             &__bottom{
-                position: absolute;
-                right: -40px !important;
-                bottom: 0 !important;
+                display: none !important;
             }
 
         }
@@ -765,7 +832,7 @@ footer{
         }
         &__top640{
             display: block !important;
-            z-index: 1 !important;
+            z-index: -1 !important;
             top: 0;
             right: -40px;
         }
@@ -779,9 +846,13 @@ footer{
         }
         &__box{
             flex-wrap: wrap;
+            justify-content: center !important;
             .mini-banner{
                 margin-right: 0 !important;
                 margin-bottom: 20px;
+                .banner-text320{
+                    display: none;
+                }
                 .banner-text{
                     h3{
                         top:388px !important;
@@ -798,6 +869,7 @@ footer{
         }
     }
     .apps{
+        justify-content: center !important;
         &__text{
             margin-right: 0 !important;
             h2{
@@ -820,7 +892,7 @@ footer{
         }
         .phone640{
             display: block !important;
-            margin-right: 30px;
+            margin-left: 45px;
         }
     }
     .reviews{
@@ -836,12 +908,19 @@ footer{
         &__top640{
             display: block !important;
             top: 0;
-            right: -40px;
+            right: 0px;
         }
         &__slider{
+            position: relative;
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+            flex-wrap: nowrap;
             .review{
+                min-width: 460px;
                 width: 415px !important;
                 height: 323px !important;
+                margin-right: 20px !important;
                 &__text{
                     p{
                         max-width: 372px !important;
@@ -849,7 +928,7 @@ footer{
                         margin-bottom: 13px !important;
                     }
                     p:last-child{
-                        margin-bottom: 40px;
+                        margin-bottom: 40px !important;
                     }
                 }
             }
@@ -859,14 +938,23 @@ footer{
             margin-top: 393px !important;
             .arrows{
                 bottom: 0px !important;
-                left: 371px !important;
+                left: 435px  !important;
             }
         }
     }
     .quest{
         margin-bottom: 80px !important;
+
         &__text{
             flex-direction: column;
+            .quest-circle{
+                display: none !important;
+            }
+            .quest-circle640{
+                display: block !important;
+                right: -40px;
+                top: -140px;
+            }
             .question-left{
                 h2{
                     font-weight: 600 !important;
@@ -876,7 +964,7 @@ footer{
                 }
                 p{
                     max-width: 416px !important;
-                    line-height: 160%;
+                    line-height: 160% !important;
                 }
                 button{
                     margin-top: 12px !important;
@@ -885,6 +973,11 @@ footer{
             .question-right{
                 margin-top: 80px !important;
                 ul{
+                    li{
+                        h3::after{
+                            width: 150px !important;
+                        }
+                    }
                     margin-left: 0 !important;
                 }
             }
@@ -892,6 +985,7 @@ footer{
     }
     .bike-card{
         background-image: url('../image/svg/bg-wh-bike640.svg') !important;
+        background-size: cover;
         background-repeat: no-repeat;
         width: 560px !important;
         height: 420px !important;
@@ -903,7 +997,7 @@ footer{
         .wh-640{
             display: block !important;
             top: -66px;
-            left: 175px;
+            left: 136px;
         }
         .bike-info{
             p{
@@ -937,14 +1031,311 @@ footer{
     }
     .footer{
         flex-direction: column;
+        align-items: center;
         .xiaomi{
             display: flex !important;
+            flex-direction: column;
             justify-content: center;
         }
         .time{
-            display: flex !important;
             align-items: center !important;
+        }
+    }
+}
+
+
+@media  (max-width:480px){
+    .container{
+        padding: 0 20px;
+    }
+    .menu{
+        margin-top: 22px !important;
+        margin-bottom: 0px !important; 
+        .logo-640{
+            width: 49px;
+            height: 24.68px;
+        }
+        .menu-640{
+            img{
+                width: 45px;
+                height: 45px;
+            }
+            
+        }
+    }
+    .banner{
+        h1{
+            display: none;
+        }
+        p{
+            display: none;
+        }
+        .bike-bg640{
+            display: none !important;
+        }
+        .bike-bg320{
+            display: block !important;
+            left: -20px;
+            top: -72px;
+        }
+    }
+    .infos{
+        margin-top: 397px !important;
+        &__title{
+            display: flex;
+            justify-content: center;
+            h2{
+                font-size: 25px !important;
+                line-height: 120% !important;
+                margin-bottom: 30px !important;
+            }
+        }
+        &__box{
+            ul{
+                margin-bottom: 40px !important;
+                margin-right: 0 !important;
+                img{
+                    margin-top: 15px;
+                    display: block !important;
+                    border-radius: 15px;
+                    width: 280px !important;
+                    height: 200px !important;
+                }
+                li{
+                    h3,p{
+                        opacity: 1 !important;
+                        max-width: 280px !important;
+                    }
+                    h3{
+                        font-size: 16px !important;
+                        margin-bottom: 20px !important;
+                    }
+                    p{
+                        font-size: 12px !important;
+                        line-height: 170% !important;
+                    }
+                    p::after{
+                        width: 100px !important;
+                        top: -10px !important;
+                    }
+                }
+            }
+            ul:last-child{
+                margin-bottom: 53px !important;
+            }
+        }
+        .svg-bg{
+            &__top640{
+                display: none !important;
+            }
+            &__medium{
+                display: none !important;
+            }
+            &__top320{
+                display: block !important;
+                left: -20px;
+                top: -110px;
+            }
+        }
+    }
+    .design{
+        padding-top: 60px !important;
+        h2{
+            font-size: 25px !important;
+            line-height: 120% !important;
+            max-width: 278px !important;
+            margin-bottom: 30px !important;
+        }
+        &__top640{
+            display: none !important;
+        }
+        &__medium640{
+            display: none !important;
+        }
+        &__top320{
+            display: block !important;
+            left: -20px;
+            top: 0;
+        }
+        &__box{
+            .mini-banner{
+                margin-bottom: 20px;
+                img{
+                    width: 280px !important;
+                    height: 260px !important;
+                }
+                .banner-text{
+                    display: none !important;
+                }
+                .banner-text320{
+                    display: block !important;
+                    h3{
+                        font-family: "Gilroy", sans-serif;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 120%;
+                        color: #f1f1f1;
+                        margin-bottom: 10px;
+                        margin-top: 15px;
+                        max-width: 280px;
+                    }
+                    p{
+                        font-family: "Gilroy", sans-serif;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 170%;
+                        letter-spacing: -0.01em;
+                        color: #f1f1f1;
+                        max-width: 280px;
+                    }
+                }
+            }
+            .mini-banner:last-child{
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .apps{
+        flex-direction: column;
+        &__text{
+            &__circle320{
+                display: block !important;
+                left: -20px;
+                bottom: -470px;
+            }
+            h2{
+                font-size: 25px !important;
+                line-height: 120% !important;
+                max-width: 278px !important;
+            }
+            p{
+                font-size: 12px !important;
+                line-height: 170% !important;
+                margin-bottom: 105px !important;
+                max-width: 278px !important;
+            }
+            ul{
+                display: none !important;
+            }
+        }
+        .phone640{
+            display: none !important;
+        }
+        .phone320{
+            display: block !important;
+            margin-bottom: 60px;
+        }
+    }
+    .reviews{
+        display: none !important;
+    }
+    .quest{
+        margin-bottom: 60px !important;
+        &__text{
             flex-direction: column;
+            .quest-circle640{
+                display: none !important;
+            }
+            .question-left{
+                h2{
+                    font-size: 25px !important;
+                    line-height: 120% !important;
+                    margin-bottom: 15px !important;
+                    max-width: 280px !important;
+                }
+                p{
+                    max-width: 280px !important;
+                    line-height: 170% !important;
+                    font-size: 12px !important;
+                }
+                button{
+                    padding: 15px 83.5px;
+                    margin-top: 0 !important;
+                    max-width: 280px !important;
+                }
+            }
+            .question-right{
+                margin-top: 60px !important;
+                ul{
+                    li{
+                        h3{
+                            font-size: 16px !important;
+                        }
+                        p{
+                            font-size: 12px !important;
+                            line-height: 170% !important;
+                        }
+                    }
+                    margin-left: 0 !important;
+                }
+            }
+        }
+    }
+    .bike-card{
+        background-image: url('../image/svg/bg-wh-bike320.svg') !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 280px !important;
+        height: 618px !important;
+        padding: 30px !important;
+        .wh-640{
+            display: none !important;
+        }
+        .wh-320{
+            display: block !important;
+            left: 0;
+            top: 220px;
+        }
+        .wh_circle320{
+            display: block !important;
+            z-index: -1;
+            bottom: 0;
+            left: -20px;
+        }
+        .bike-info{
+            p{
+                font-weight: 700 !important;
+                font-size: 16px !important;
+                color: #f1f1f1 !important;
+                margin-top: 0 !important;
+                text-align: center;
+            }
+            ul{
+                display: none !important;
+            }
+        }
+        .bike-price{
+            h2{
+                font-size: 25px !important;
+                line-height: 120% !important;
+            }
+            span{
+                font-size: 20px !important;
+                line-height: 110% !important;
+            }
+            button{
+                margin-top: 380px !important;
+                max-width: 220px !important;
+                padding: 15px 84px !important;
+                text-align: center;
+            }
+        }
+    }
+    footer{
+        padding: 30px 0;
+    }
+    .footer{
+        .xiaomi{
+            p{
+                font-size: 12px !important;
+                line-height: 170% !important;
+            }
+        }
+        .time{
+            p{
+                font-size: 12px !important;
+                line-height: 170% !important;
+            }
         }
     }
 }
